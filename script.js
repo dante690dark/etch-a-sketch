@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         size = prompt('Enter grid size (max 100):')
       }while (size > 100)
 
-      const gridSize = size**2
+      const gridSize = size ** 2
         
       for (let i = 0; i < gridSize; i++) {
         
