@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
     button.addEventListener('click', () => {
 
-      const container = document.querySelector('.container')
+      const container = document.querySelector('.container-grid')
       container.innerHTML = ''
 
       let size 
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         size = prompt('Enter grid size (max 100):')
       }while (size > 100)
 
-      const gridSize = size * size
+      const gridSize = size**2
         
       for (let i = 0; i < gridSize; i++) {
         
@@ -25,7 +25,14 @@ document.addEventListener('DOMContentLoaded', () => {
                                     box-sizing: border-box;`
 
         gridSquare.addEventListener('mouseover', () => {
-          gridSquare.style.backgroundColor = 'black'
+
+          if(!gridSquare.style.backgroundColor){
+            gridSquare.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+          }
+
+          if(gridSquare.style.backgroundColor){
+            gridSquare.style.opacity = +gridSquare.style.opacity + 0.1
+          }
         })
       
         container.appendChild(gridSquare)
