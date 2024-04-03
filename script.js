@@ -1,20 +1,21 @@
-const INITIAL_VALUE = 16
 document.addEventListener('DOMContentLoaded', () => {
   
-  let size = INITIAL_VALUE
-  const button = document.querySelector('button')
+  let size = 16
+  const buttonSize = document.querySelector('#button-size')
 
-  const etchSketch = (str=false) =>{
+  const etchSketch = (isSize=false) =>{
     const container = document.querySelector('.container-grid')
     container.innerHTML = ''
 
-    if(str){ 
+    const prevSize = size
+
+    if(isSize){ 
       do {
         size = prompt('Enter grid size (max 100):')
-      }while (size > 100) 
+      }while ( size > 100) 
     }
 
-    size ??= INITIAL_VALUE
+    size ??= prevSize
 
     const gridSize = size ** 2
       
@@ -44,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   etchSketch()
   
-  button.addEventListener('click', () => {
+  buttonSize.addEventListener('click', () => {
       etchSketch(true)
     })
   }

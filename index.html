@@ -11,7 +11,11 @@
     <header>Etch-a-Sketch</header>
 
     <div class="container-button">
-      <button type="button">size</button>
+      <button id="button-size" type="button">size</button>
+      <div style="position:relative; display:inline-block">
+        <button type="button" ">RGB color</button>
+        <input type="color" value="black" style="opacity:0; position:absolute; left:0;top:0;width:100%"/>
+      </div>
     </div>
     
     <div class="container-grid"></div>
