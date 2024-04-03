@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
   
   let size = 16
-  const buttonSize = document.querySelector('#button-size')
-
+  const buttonSize = document.querySelector('#button-size'),
+        container = document.querySelector('.container-grid')
+        
   const etchSketch = (isSize=false) =>{
-    const container = document.querySelector('.container-grid')
     container.innerHTML = ''
 
     const prevSize = size

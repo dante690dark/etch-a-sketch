@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset='UTF-8' />
-    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <meta charset='UTF-8' >
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' >
     <title>Etch-a-Sketch</title>
-    <link rel='stylesheet' href='style.css' />
+    <link rel='stylesheet' href='style.css' >
     <script src='script.js' defer></script>
   </head>
   <body>
     <header>Etch-a-Sketch</header>
 
-    <div class="container-button">
-      <button id="button-size" type="button">size</button>
-      <div style="position:relative; display:inline-block">
-        <button type="button" ">RGB color</button>
-        <input type="color" value="black" style="opacity:0; position:absolute; left:0;top:0;width:100%"/>
+    <div class='container-button'>
+      <button id='button-size' type='button'>size</button>
+      <div class='color-section'>
+        <button id="button-color" type='button'>RGB color</button>
+        <input id="input-color" type='color' value='black'>
       </div>
+      <button id='button-random' type='button'>Random color</button>
     </div>
     
-    <div class="container-grid"></div>
+    <div class='container-grid'></div>
   </body>
 </html>

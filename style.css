@@ -15,3 +15,17 @@ header{
   margin: auto;
   border: 1px solid black;
 }
+
+
+.color-section{
+  position:relative; 
+  display:inline-block;
+}
+
+#input-color{
+  position:absolute; 
+  left:0;
+  top:0;
+  width:100%;
+  opacity:0; 
+}
