@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
     size ??= prevSize
 
     const divStyle = `width: calc(100% / ${size}); 
-                    height: calc(100% / ${size});  
-                    border: 1px solid #ddd; 
-                    box-sizing: border-box;`,
+                      height: calc(100% / ${size});  
+                      border: 1px solid #ddd; 
+                      box-sizing: border-box;`,
           gridSize = size ** 2
       
     for (let i = 0; i < gridSize; i++) {
