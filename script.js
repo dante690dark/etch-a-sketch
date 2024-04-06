@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         buttonRandom = document.querySelector('#button-random'),
         buttonClear = document.querySelector('#button-clear'),
         container = document.querySelector('.container-grid')
-        
+
   const etchSketch = (isSize=false) =>{
     container.innerHTML = ''
 
@@ -41,15 +41,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
       gridSquare.style.cssText = divStyle
 
+      const setColor = (color) => {  
+        gridSquare.style.backgroundColor = color
+      }
+
       gridSquare.addEventListener('mouseover', () => {
 
-        // TODO: refactor those if
         if(!gridSquare.style.backgroundColor){
-          gridSquare.style.backgroundColor = color  
-        }
+          const randomColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
 
-        if(!gridSquare.style.backgroundColor){
-          gridSquare.style.backgroundColor = `rgb(${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)}, ${Math.floor(Math.random() * 255)})`
+          color ? setColor(color) : setColor(randomColor)
         }
 
         if(gridSquare.style.backgroundColor){
