@@ -1,10 +1,32 @@
+@font-face {
+	font-family: 'Press-star-2P';
+	src: url('./fonts/PressStart2P-Regular.ttf');
+	font-weight: bold;
+	font-style: normal;
+}
+
+
 header{
+  font-family: 'Press-star-2P';
   text-align: center;
+}
+
+button {
+	border: none;
+	background-color: transparent;
+
+  & span {
+    font-family: Press-star-2P;
+    cursor: pointer;
+  }
 }
 
 .container-button{
   padding: 40px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  gap: 40px;
 }
 
 .container-grid {
@@ -28,4 +50,5 @@ header{
   top:0;
   width:100%;
   opacity:0; 
+  cursor: pointer;
 }
